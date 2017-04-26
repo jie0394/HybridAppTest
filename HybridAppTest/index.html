@@ -6,24 +6,32 @@
     <body>
         <div style="margin-top: 100px">
             <h1>Objective-C和JavaScript交互的那些事</h1>
-            <input type="button" value="CallCamera" onclick="web.callCamera()">
+            <input type="button" value="CallCamera" onclick="callCamera()">
         </div>
         <div>
             <input type="button" value="Share" onclick="callShare()">
         </div>
-        
+        <div>
+            <input type="button" value="CallBack" onclick="web.callBack()">
+                </div>
         <script>
             var callShare = function() {
                 
                   web.share("123","123");
             }
         
-        var picCallback = function(photos) {
-            alert(photos);
-        }
         
         var shareCallback = function(){
-            alert('success');
+            alert('share回调success');
+        }
+        
+        
+        function callCamera(){
+            alert('callCamera调用success');
+        }
+        
+        function callBack(s1,s2){
+            return s1+s2;
         }
         </script>
     </body>

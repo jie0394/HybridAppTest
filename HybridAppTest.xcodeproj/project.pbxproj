@@ -15,6 +15,8 @@
 		E04919831EADD0D5007199B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04919811EADD0D5007199B6 /* LaunchScreen.storyboard */; };
 		E049198E1EADD0D5007199B6 /* HybridAppTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E049198D1EADD0D5007199B6 /* HybridAppTestTests.m */; };
 		E04919991EADD0D5007199B6 /* HybridAppTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E04919981EADD0D5007199B6 /* HybridAppTestUITests.m */; };
+		E04919A81EADD1C5007199B6 /* SZKoclaJScontextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E04919A71EADD1C5007199B6 /* SZKoclaJScontextModel.m */; };
+		E04919AA1EADD1CB007199B6 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E04919A91EADD1CB007199B6 /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		E04919941EADD0D5007199B6 /* HybridAppTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HybridAppTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04919981EADD0D5007199B6 /* HybridAppTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HybridAppTestUITests.m; sourceTree = "<group>"; };
 		E049199A1EADD0D5007199B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E04919A61EADD1C5007199B6 /* SZKoclaJScontextModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZKoclaJScontextModel.h; sourceTree = "<group>"; };
+		E04919A71EADD1C5007199B6 /* SZKoclaJScontextModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZKoclaJScontextModel.m; sourceTree = "<group>"; };
+		E04919A91EADD1CB007199B6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +111,9 @@
 				E04919791EADD0D5007199B6 /* ViewController.h */,
 				E049197A1EADD0D5007199B6 /* ViewController.m */,
 				E049197C1EADD0D5007199B6 /* Main.storyboard */,
+				E04919A61EADD1C5007199B6 /* SZKoclaJScontextModel.h */,
+				E04919A71EADD1C5007199B6 /* SZKoclaJScontextModel.m */,
+				E04919A91EADD1CB007199B6 /* index.html */,
 				E049197F1EADD0D5007199B6 /* Assets.xcassets */,
 				E04919811EADD0D5007199B6 /* LaunchScreen.storyboard */,
 				E04919841EADD0D5007199B6 /* Info.plist */,
@@ -247,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E04919831EADD0D5007199B6 /* LaunchScreen.storyboard in Resources */,
+				E04919AA1EADD1CB007199B6 /* index.html in Resources */,
 				E04919801EADD0D5007199B6 /* Assets.xcassets in Resources */,
 				E049197E1EADD0D5007199B6 /* Main.storyboard in Resources */,
 			);
@@ -273,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04919A81EADD1C5007199B6 /* SZKoclaJScontextModel.m in Sources */,
 				E049197B1EADD0D5007199B6 /* ViewController.m in Sources */,
 				E04919781EADD0D5007199B6 /* AppDelegate.m in Sources */,
 				E04919751EADD0D5007199B6 /* main.m in Sources */,
