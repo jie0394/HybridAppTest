@@ -80,12 +80,24 @@
 }
 #pragma mark iOS调用js方法
 -(void)btnJS:(id)sender{
+    
+    //方式一
     [_webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"callCamera()"]];//弹出js的alert;
     
     NSString *result = [_webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"callBack(%@,%@)",@"123",@"456"]];
     
-    NSLog(@"%@",result);
+    //方式二
+    JSValue *result1 = [self.jsContext evaluateScript:[NSString stringWithFormat:@"callBack(%@,%@)",@"123",@"789"]];//使用jsContext调用js方法回调成功弹出js的alert;
     
+    //方式三
+    JSValue *jsFunction = self.jsContext[@"callBack"];
+    
+   JSValue *result2 = [jsFunction callWithArguments:@[@"345",@"123"]];//如果有参数，数组里面跟对应参数例如：@[@"123",@"ewqe"]
+    JSValue *result3 = [jsFunction callWithArguments:@[[NSNumber numberWithInt:123],[NSNumber numberWithInt:567]]];
+    NSLog(@"%@",result);
+    NSLog(@"%@",[result1 description]);
+    NSLog(@"%@",[result2 description]);
+    NSLog(@"%@",[result3 description]);
 }
 
 -(void)callCamera:(JSContext *)context{
@@ -97,7 +109,16 @@
 
 -(void)callBackTest{
     NSArray *args = [JSContext currentArguments];
-    [_webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"shareCallback()"]];//方法回调成功弹出js的alert;
+    
+    //方式一
+    [_webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"shareCallback()"]];//使用webView回调成功弹出js的alert;
     NSLog(@"%@",args );
+    //方式二
+    [self.jsContext evaluateScript:@"shareCallback()"];//使用jsContext调用js方法回调成功弹出js的alert;
+    
+    //方式三
+    JSValue *jsFunction = self.jsContext[@"shareCallback()"];
+    
+    [jsFunction callWithArguments:@[]];//如果有参数，数组里面跟对应参数例如：@[@"123",@"ewqe"]
 }
 @end
