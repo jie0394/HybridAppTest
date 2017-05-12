@@ -117,7 +117,7 @@
     [self.jsContext evaluateScript:@"shareCallback()"];//使用jsContext调用js方法回调成功弹出js的alert;
     
     //方式三
-    JSValue *jsFunction = self.jsContext[@"shareCallback()"];
+    JSValue *jsFunction = self.jsContext[@"shareCallback"];
     
     [jsFunction callWithArguments:@[]];//如果有参数，数组里面跟对应参数例如：@[@"123",@"ewqe"]
 }
